@@ -1,13 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+// import { useState } from 'react'
+// import reactLogo from './assets/react.svg'
+// import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import { Footer, Loader, Navbar, Services, Transactions, Welcome } from "./components"
 
+const App = () => {
+  // const [count, setCount] = useState(0)
   return (
-    <div className="App">
-      <div>
+    <div className="min-h-screen">
+      {/* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
         </a>
@@ -26,7 +27,17 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p>
+      </p> */}
+      {/* <h1 className="text-3xl font-bold underline">
+        Hello world!
+      </h1> */}
+      <div className="gradient-bg-welcome">
+        <Navbar />
+        <Welcome />
+      </div>
+        <Services />
+        <Transactions />
+        <Footer />
     </div>
   )
 }
