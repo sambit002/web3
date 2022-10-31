@@ -13,7 +13,8 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
         type={type}
         step="0.001"
         value={value}
-        onChange={(e) => handleChange(e, name) } 
+        onChange={(e) => handleChange(e, name) }
+        className="my-2 w-full rounded-sm p-2 outline-none bg-transparent text-white border-none text-sm white-glassmorphism" 
     />
 )
 
@@ -21,6 +22,10 @@ const Welcome = () => {
     
     const ConnectWallet = () => {
     
+    }
+
+    const handleSubmit = () => {
+
     }
     
     return (
@@ -71,12 +76,27 @@ const Welcome = () => {
                                     ox5454d.....45xerzz
                                 </p>
                                 <p className="text-white font-semibold text-lg mt-1">
-                                    Ethereum
+                                    Ethereum 
                                 </p>
                             </div>
                         </div>
-                        <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
+                        <div className="p-5 mt-8 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
                             <Input placeholder="Adress to" name="address to" type="text" handleChange={() => {}} / > 
+                            <Input placeholder="Amount (ETH)" name="amount" type="number" handleChange={() => {}} / > 
+                            <Input placeholder="Keyword (Gif)" name="keyword" type="text" handleChange={() => {}} / > 
+                            <Input placeholder="Enter message" name="message" type="text" handleChange={() => {}} / >
+                            <div className="h-[1px] w-full bg-gray-400 my-2"></div>
+                            {
+                                true ? (
+                                    <Loader />
+                                ) : (
+                                    <button
+                                        type="button"
+                                        onClick={handleSubmit}
+                                        className="w-full text-white mt-2 border-[1px] p-2 border-[#3d4f7c] rounded-full cursor-pointer"
+                                    >Send now</button>
+                                )
+                            } 
                         </div>
                     </div>
                 </div>
